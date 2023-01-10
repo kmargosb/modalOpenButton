@@ -8,22 +8,20 @@ let $modal = document.querySelector('.modal');
 
 // --------------------- Funciones ----------------------
 
-$openBtn.addEventListener('click', function(){
+$openBtn.addEventListener('click', () => {
     // console.log("funciona")
     $modalContainer.style.display = "none";
     $modal.style.display = "flex"
+    
 })
-window.addEventListener('click', function(element){
+window.addEventListener('click', (element) => {
     // console.log("funciona el click");
     if(element.target === document.body){
         $modalContainer.style.display = "flex";
         $modal.style.display = "none";
     }
 })
-$closeBtn.addEventListener('click', function(){    
+$closeBtn.addEventListener('click', () => {    
     $modalContainer.style.display = "flex";
-    $modal.style.display = "none";    
+    $modal.style.display = "none";
 })
-
-
-// Funciona el click en cualquier parte de la ventana pero no cambia el display a "none"

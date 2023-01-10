@@ -7,12 +7,13 @@
 body{
     width: 100vw;
     height: 100vh;
-    background: url(img/inmobiliaria.jpg) no-repeat center center / cover;
+    background: url(img/inmobiliaria.jpg) no-repeat center center / cover;    
 
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .modal-container{
     width: 400px;  
     height: 180px;  
@@ -23,6 +24,9 @@ body{
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
+}
+.modal-container > h1{
+    font-size: 2rem;
 }
 .open-btn{
     background: rgb(52, 126, 196);
@@ -63,4 +67,33 @@ body{
     color: rgba(255, 0, 0, 0.349);
     transform: scale(1.5);
     font-weight: bold;    
+}
+
+@media (max-width: 800px){
+    .modal-container, modal{
+        width: 300px;
+        height: 135px;
+    }
+    .open-btn{
+        font-size: 1rem;
+    }
+    .modal-container > h1 {
+        font-size: 1.9rem;
+    }
+}
+@media (max-width: 450px){
+    .modal-container, .modal{
+        width: 235px;
+        height: 101.25px;
+        border-radius: 0.5rem;
+        text-align: center;
+    }
+    .open-btn{
+        font-size: 1rem;
+        border-radius: 0.2rem;
+    }
+    .modal-container > h1 {
+        font-size: 1.9rem;
+    }
+    
 }
